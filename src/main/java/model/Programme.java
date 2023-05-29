@@ -99,7 +99,7 @@ public class Programme {
      * @throws Exception
      */
 
-    public boolean addStudent(Student student,LocalDate currentDate) throws Exception{
+    public boolean addStudent(Student student,LocalDate currentDate,Football game) throws Exception{
         List<Student> student_lists = getEnrollments();
         if (student_lists.size() == 250) {
             return false;
@@ -114,6 +114,7 @@ public class Programme {
             return false;
         }
         this.enrolled.add(student);
+        game.addAvailStudent(student);
         return true;
     }
 

@@ -77,6 +77,9 @@ public class Football {
         avail.add(snew);
     }
 
+    public List<Student> getAvailStudents(){
+        return avail;
+    }
 
 
 
