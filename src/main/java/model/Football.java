@@ -10,6 +10,10 @@ import java.util.List;
 public class Football {
     
     /**
+     * match name
+     */
+    private String name;
+    /**
      * Match date
      */
     private Date matchDate;
