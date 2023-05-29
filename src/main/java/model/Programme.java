@@ -95,8 +95,22 @@ public class Programme {
      */
 
     public boolean addStudent(Student student){
-    	return false;
-   
+        List<Student> student_lists = getEnrollments();
+        if (student_lists.size() == 250) {
+            return false;
+        }
+        for (int i=0;i<student_lists.size();i++){
+            if(student == student_lists[i]){
+                return false;
+            }
+        }
+        Date currentDate = new Date();
+        int result = currentDate.compareTo(getStartDate());
+        if(result > 0){
+            return false;
+        }
+        this.enrolled.add(student)
+        return true;
     }
 
 
